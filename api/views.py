@@ -18,6 +18,8 @@ class CompanyView(View):
             if len(companies) > 0:
                 company = companies[0]
                 datos = {'message': 'Success', 'companies': company}
+            else:
+                datos = {'message': 'Company not found'}
         else:
             companies = list(Company.objects.values())
             if len(companies) > 0:
