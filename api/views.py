@@ -37,7 +37,9 @@ class CompanyView(View):
         return JsonResponse(datos)
 
     def put(self, request):
-        pass
+        jd = json.loads(request.body)
+        # print(jd)
+        companies = list[Company.objects.filter(id=id).values()]
 
     def delete(self, request):
         pass
